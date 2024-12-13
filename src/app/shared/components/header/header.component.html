@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Agenda</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="home">Home</a>
+        </li>
+
+        <li ngbDropdown class="nav-item dropdown">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" role="button" id="NavDropdown1" data-bs-toggle="dropdown" aria-expanded="false" >
+            Cadastros
+          </a>
+          <ul ngbDropdownMenu aria-labelledby="NavDropdown1" class="dropdown-menu">
+            <li><a ngbDropdownItem (click)="$event.preventDefault()" class="dropdown-item" routerLink="area">Área</a></li>
+            <li><a ngbDropdownItem (click)="$event.preventDefault()" class="dropdown-item" routerLink="professional">Profissional</a></li>
+            <li><a ngbDropdownItem (click)="$event.preventDefault()" class="dropdown-item" routerLink="appointmentType">Tipo de Atendimento</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a ngbDropdownItem (click)="$event.preventDefault()" class="dropdown-item" routerLink="client">Cliente</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a ngbDropdownItem (click)="$event.preventDefault()" class="dropdown-item" routerLink="user">Usuário</a></li>
+          </ul>
+        </li>
+
+        <li ngbDropdown class="nav-item dropdown">
+          <a ngbDropdownToggle id="NavDropdown2" class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Agendamentos
+          </a>
+          <ul ngbDropdownMenu aria-labelledby="NavDropdown2" class="dropdown-menu">
+            <li><a ngbDropdownItem (click)="$event.preventDefault()" class="dropdown-item"routerLink="today-appointments">Hoje</a></li>
+            <li><a ngbDropdownItem (click)="$event.preventDefault()" class="dropdown-item" routerLink="create-appointment">Agendar</a></li>
+            <li><a ngbDropdownItem (click)="$event.preventDefault()" class="dropdown-item"routerLink="cancel-appointment">Cancelar</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a ngbDropdownItem (click)="$event.preventDefault()" class="dropdown-item"routerLink="client-history">Histórico do Cliente</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a ngbDropdownItem (click)="$event.preventDefault()" class="dropdown-item"routerLink="professional-wordays">Agenda do Profissional</a></li>
+          </ul>
+        </li>
+
+      </ul>
+      <div class="d-flex">
+        <div class="my-auto me-4">
+            <span class="fw-bold me-2">{{getRealName()}}</span>
+            <span *ngIf="isAdmin()">(admin)</span>
+        </div>
+          <button class="btn btn-outline-secondary" (click)="logout()" type="submit">Sair</button>
+      </div>
+    </div>
+  </div>
+</nav>
