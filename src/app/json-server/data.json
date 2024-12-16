@@ -13,18 +13,6 @@
       "phone": "(86) 2448-2481"
     },
     {
-      "id": 4,
-      "name": "Chandler Powers",
-      "dateOfBirth": "2019-09-12",
-      "phone": "(83) 2433-3219"
-    },
-    {
-      "id": 5,
-      "name": "Cheri Miller",
-      "dateOfBirth": "2014-04-24",
-      "phone": "(97) 4580-2115"
-    },
-    {
       "id": 6,
       "name": "Mara Woodard",
       "dateOfBirth": "2019-02-22",
@@ -205,12 +193,6 @@
       "phone": "(82) 6473-3441"
     },
     {
-      "id": 44,
-      "name": "Carlson Castro",
-      "dateOfBirth": "2021-10-24",
-      "phone": "(89) 3552-2281"
-    },
-    {
       "id": 46,
       "name": "Fry Buchanan",
       "dateOfBirth": "2020-12-17",
@@ -331,22 +313,10 @@
       "phone": "(91) 5439-3989"
     },
     {
-      "id": 69,
-      "name": "Cathleen Davis",
-      "dateOfBirth": "2019-04-11",
-      "phone": "(87) 6497-3263"
-    },
-    {
       "id": 70,
       "name": "Sherry Decker",
       "dateOfBirth": "2023-02-11",
       "phone": "(88) 6525-2670"
-    },
-    {
-      "id": 71,
-      "name": "Christian Joyner",
-      "dateOfBirth": "2016-06-07",
-      "phone": "(94) 9574-3184"
     },
     {
       "id": 73,
@@ -473,18 +443,6 @@
       "name": "Mai Suarez",
       "dateOfBirth": "2018-01-17",
       "phone": "(86) 6432-2809"
-    },
-    {
-      "id": 98,
-      "name": "Caroline Carr",
-      "dateOfBirth": "2016-07-05",
-      "phone": "(80) 7501-2314"
-    },
-    {
-      "id": 99,
-      "name": "Cecile Delgado",
-      "dateOfBirth": "2019-09-09",
-      "phone": "(90) 4595-3956"
     },
     {
       "id": 100,

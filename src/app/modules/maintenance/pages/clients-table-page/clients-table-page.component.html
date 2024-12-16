@@ -37,13 +37,14 @@
           </td>
           <td>{{ client.phone}}</td>
           <td>{{ client.dateOfBirth | date : "dd/MM/yyyy" }}</td>
-          <td (click)="removeClient(client.id)">
+          <td (click)="removeClient(client, modalConfirm)">
             <img
               src="assets/svg/trash3-fill.svg"
               width="20"
               height="20"
               alt="remove Client"
             />
+
           </td>
         </tr>
       </tbody>
@@ -51,3 +52,9 @@
     <ngb-pagination  [collectionSize]="ClientPage.numberofElements" class="d-flex justify-content-center" [(page)]="page" [boundaryLinks]="true" (pageChange)="pageChange()" />
   </div>
 </div>
+
+<app-modal [title]="'Deseja remover o Cliente?'" #modalConfirm >
+  <ng-container *ngIf="selectedCliente">
+    Nome: <span class="fw-bold me-1" >{{selectedCliente.name}}</span>
+  </ng-container>
+</app-modal>
