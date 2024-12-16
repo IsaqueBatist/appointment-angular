@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { ToastComponent } from './components/toast/toast.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 
@@ -11,6 +12,7 @@ import { ToastComponent } from './components/toast/toast.component';
   declarations: [
     HeaderComponent,
     ToastComponent,
+    ModalComponent,
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { ToastComponent } from './components/toast/toast.component';
   ],
   exports: [
     HeaderComponent,
-    ToastComponent
+    ToastComponent,
+    ModalComponent
   ]
 })
 export class SharedModule { }

@@ -11,6 +11,7 @@ import { UserPageComponent } from './pages/user-page/user-page.component';
 import { ClientsTablePageComponent } from './pages/clients-table-page/clients-table-page.component';
 import { ClientFormPageComponent } from './pages/client-form-page/client-form-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from "../../shared/shared.module";
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     NgbModule,
     ReactiveFormsModule,
-    HttpClientModule
-  ]
+    HttpClientModule,
+    SharedModule
+]
 })
 export class MaintenanceModule { }
