@@ -11,12 +11,13 @@ import { Page } from '../../../../core/models/page';
 
 export class ClientsTablePageComponent implements OnInit {
 
-  constructor(private ClientService: ClientService) {}
+  constructor(private ClientService: ClientService) { }
+
 
   ClientPage: Page<Client> = {} as Page<Client>;
-  clients: Client[] = [];
   nameFilter:string = ""
   page=1;
+
 
   ngOnInit(): void {
     this.loadClients();

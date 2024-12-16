@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { MaintenanceRoutingModule } from './maintenance-routing.module';
@@ -9,6 +9,8 @@ import { ProfessionalPageComponent } from './pages/professional-page/professiona
 import { AppointmentTypePageComponent } from './pages/appointment-type-page/appointment-type-page.component';
 import { UserPageComponent } from './pages/user-page/user-page.component';
 import { ClientsTablePageComponent } from './pages/clients-table-page/clients-table-page.component';
+import { ClientFormPageComponent } from './pages/client-form-page/client-form-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -17,13 +19,16 @@ import { ClientsTablePageComponent } from './pages/clients-table-page/clients-ta
     ProfessionalPageComponent,
     AppointmentTypePageComponent,
     UserPageComponent,
-    ClientsTablePageComponent
+    ClientsTablePageComponent,
+    ClientFormPageComponent
   ],
   imports: [
     CommonModule,
     MaintenanceRoutingModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class MaintenanceModule { }

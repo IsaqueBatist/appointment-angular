@@ -5,13 +5,16 @@ import { ProfessionalPageComponent } from './pages/professional-page/professiona
 import { AppointmentTypePageComponent } from './pages/appointment-type-page/appointment-type-page.component';
 import { UserPageComponent } from './pages/user-page/user-page.component';
 import { ClientsTablePageComponent } from './pages/clients-table-page/clients-table-page.component';
+import { ClientFormPageComponent } from './pages/client-form-page/client-form-page.component';
 
 const routes: Routes = [
   {path: 'area', component: AreaPageComponent},
   {path: 'professional', component: ProfessionalPageComponent},
   {path: 'appointmentType', component: AppointmentTypePageComponent},
   {path: 'clients-table', component: ClientsTablePageComponent},
-  {path: 'user', component: UserPageComponent}
+  {path: 'client-form/:id', component: ClientFormPageComponent},
+  {path: 'client-form', component: ClientFormPageComponent},
+  {path: 'user', component: UserPageComponent},
 ];
 
 @NgModule({

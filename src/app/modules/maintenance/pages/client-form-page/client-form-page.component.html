@@ -1,0 +1,89 @@
+<div class="container text-center">
+  <div class="display-6 my-2">
+    {{isEditinMode? 'Editar' : 'Cadastrar'}} Cliente
+  </div>
+  <div class="border rounded shadow-sm p-4">
+    <form [formGroup]="formGroupClient" #ngFormClient="ngForm">
+      <div class="row">
+        <div class="col-8 m-auto">
+          <div class="mb-3">
+            <label for="name">Nome:</label>
+            <input
+              class="form-control"
+              type="text"
+              id="name"
+              name="name"
+              formControlName="name"
+            />
+            <div class="text-danger text-start" *ngIf="ngFormClient.submitted">
+              <small *ngIf="pfsname?.errors?.['required']"
+                ><sup>*</sup>Nome Obrigatório</small
+              >
+              <small *ngIf="pfsname?.errors?.['minlength']"
+                ><sup>*</sup>Tamanhoo mínimo de 3 caracteres</small
+              >
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="mb-3">
+                <label for="phone">Telefone:</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  formControlName="phone"
+                  placeholder="telefone"
+                />
+                <div
+                  class="text-danger text-start"
+                  *ngIf="ngFormClient.submitted"
+                >
+                  <small *ngIf="pfsphone?.errors?.['required']"
+                    ><sup>*</sup>Telefone Obrigatório</small
+                  >
+                  <small *ngIf="pfsphone?.errors?.['minlength']"
+                    ><sup>*</sup>Tamanho mínimo de 11 caracteres</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="mb-3">
+                <label for="date">Data de nascimento:</label>
+                <input
+                  class="form-control"
+                  type="date"
+                  id="date"
+                  name="dateOfBirth"
+                  formControlName="dateOfBirth"
+                  placeholder="dd/mm/yyyy"
+                />
+                <div
+                  class="text-danger text-start"
+                  *ngIf="ngFormClient.submitted"
+                >
+                  <small *ngIf="pfsdateOfBirth?.errors?.['required']"
+                    ><sup>*</sup>Data de nascimento Obrigatório</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="mb-3 text-end">
+              <a class="btn btn-secondary me-1" (click)="cencel()">Cancelar</a>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                (click)="saveClient()"
+                [disabled]="!ngFormClient.dirty"
+              >
+                Salvar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
