@@ -7,9 +7,10 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
   declarations: [
-    HomePageComponent
+
   ],
   imports: [
+    HomePageComponent,
     CommonModule,
     HomeRoutingModule
   ]

@@ -19,7 +19,7 @@
             <li><a ngbDropdownItem (click)="$event.preventDefault()" class="dropdown-item" routerLink="professional">Profissional</a></li>
             <li><a ngbDropdownItem (click)="$event.preventDefault()" class="dropdown-item" routerLink="appointmentType">Tipo de Atendimento</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a ngbDropdownItem (click)="$event.preventDefault()" class="dropdown-item" routerLink="client">Cliente</a></li>
+            <li><a ngbDropdownItem (click)="$event.preventDefault()" class="dropdown-item" routerLink="clients-table">Cliente</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a ngbDropdownItem (click)="$event.preventDefault()" class="dropdown-item" routerLink="user">Usuário</a></li>
           </ul>
@@ -44,7 +44,7 @@
       <div class="d-flex">
         <div class="my-auto me-4">
             <span class="fw-bold me-2">{{getRealName()}}</span>
-            <span *ngIf="isAdmin()">(admin)</span>
+            <span *gIf="isAdmin()">(admin)</span>
         </div>
           <button class="btn btn-outline-secondary" (click)="logout()" type="submit">Sair</button>
       </div>

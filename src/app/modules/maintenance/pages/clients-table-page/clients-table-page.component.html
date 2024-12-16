@@ -1,0 +1,53 @@
+<div class="container text-center">
+  <div class="display-6 my-2">Cadastro de Clientes:</div>
+  <div class="border rounded shadow-sm p-4">
+    <div class="text-end">
+      <a  class="btn btn-primary" routerLink="/client-form">Novo</a>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Telefone</th>
+          <th scope="col">Data Nascimento</th>
+          <th scope="col">Remover</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th></th>
+          <td>
+            <input
+              type="text"
+              placeholder="filtrar por nome"
+              class="form-control"
+              [(ngModel)]="nameFilter"
+              (keyup)="filterName()"
+            />
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr *ngFor="let client of ClientPage.content">
+          <th scope="row">{{ client.id }}</th>
+          <td>
+            <a routerLink="/client-form/{{client.id}}">{{ client.name }}</a>
+          </td>
+          <td>{{ client.phone}}</td>
+          <td>{{ client.dateOfBirth | date : "dd/MM/yyyy" }}</td>
+          <td (click)="removeClient(client.id)">
+            <img
+              src="assets/svg/trash3-fill.svg"
+              width="20"
+              height="20"
+              alt="remove Client"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <ngb-pagination  [collectionSize]="ClientPage.numberofElements" class="d-flex justify-content-center" [(page)]="page" [boundaryLinks]="true" (pageChange)="pageChange()" />
+  </div>
+</div>
