@@ -3,6 +3,7 @@ import {  FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Location } from '@angular/common';
 import { ClientService } from '../../../../core/services/client.service';
 import { ActivatedRoute } from '@angular/router';
+import { ToastService } from '../../../../core/services/toast.service';
 
 @Component({
   selector: 'app-client-form-page',
@@ -11,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ClientFormPageComponent implements OnInit{
 
-  constructor( private formBuilder: FormBuilder, private clientService: ClientService, private location: Location, private router: ActivatedRoute) {
+  constructor( private formBuilder: FormBuilder, private clientService: ClientService, private location: Location, private router: ActivatedRoute, private toastService: ToastService) {
     this.formGroupClient = this.formBuilder.group({
       id: [''],
       name: ['', [Validators.minLength(3), Validators.required]],
@@ -43,15 +44,23 @@ export class ClientFormPageComponent implements OnInit{
   saveClient(){
     if(this.formGroupClient.valid && !this.isEditinMode){
       this.clientService.saveNewClient(this.formGroupClient.value).subscribe({
-        next: () => {this.location.back()},
-        error: () => {alert('Erro ao salvar cliente')}
+        next: () => {
+          this.toastService.show("Cliente salvo com sucesso", {classname: 'bg-success text-light'})
+          this.location.back()
+        },
+        error: () => {
+          this.toastService.show("Erro ao salvar cliente", {classname: 'bg-danger text-light'})
+        }
       })
     }else if(this.formGroupClient.valid && this.isEditinMode){
       this.clientService.updateClient(this.formGroupClient.value).subscribe({
         next: () => {
           this.isEditinMode = false;
+          this.toastService.show("Cliente atualizado com sucesso", {classname: 'bg-success text-light'})
           this.location.back()},
-        error: () => {alert('Erro ao atualizar cliente')}
+        error: () => {
+          this.toastService.show("Erro ao atualizar cliente", {classname: 'bg-danger text-light'})
+        }
       })
     }
   }
