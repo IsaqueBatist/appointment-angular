@@ -26,7 +26,7 @@ export class ClientsTablePageComponent implements OnInit {
   }
 
   loadClients(){
-    this.ClientService.getClients(this.nameFilter, this.page).subscribe({
+    this.ClientService.getClientsPage(this.nameFilter, this.page).subscribe({
       next: response =>{
         this.ClientPage.content = response.body
         this.ClientPage.numberofElements = parseInt(response.headers.get('X-Total-Count') || '0')
