@@ -1,0 +1,26 @@
+<div class="calender">
+  <div class="row">
+    <div class="col" [ngClass]="{'previus-month': showPreviousMonth()}"><img src="/assets/svg/caret-left-fill.svg" width="20" height="20" alt="previus" (click)="onPreviusMonth()"  *ngIf="showPreviousMonth()"></div>
+    <div class="col month-year">{{calendarMont | date: 'MMMM': 'pt-BR' | titlecase}}/{{calendarMont.getFullYear()}}</div>
+    <div class="col next-month"><img src="/assets/svg/caret-right-fill.svg" width="20" height="20" alt="next" (click)="onNextMonth()"></div>
+  </div>
+  <div class="row">
+    <div  class="col week-day">Seg</div>
+    <div class="col week-day">Ter</div>
+    <div class="col week-day">Qua</div>
+    <div class="col week-day">Qun</div>
+    <div class="col week-day">Sex</div>
+    <div class="col week-day">Sab</div>
+    <div class="col week-day">Dom</div>
+  </div>
+  <div class="row" *ngFor="let line of [0,1,2,3,4,5]">
+    <div class="col day" [ngClass]="{
+      ' day-off': !dayofMonth.available && dayofMonth.day,
+      ' day-available': dayofMonth.available && dayofMonth.day,
+      ' day-selected': dayofMonth.day === selectedDay
+      }" *ngFor="let dayofMonth of days.slice(line*7, (line+1)*7)"
+      (click)="dayofMonth.available && onSelectedDay(dayofMonth.day)"
+      >
+      {{dayofMonth.day || "&nbsp;"}}
+    </div>
+  </div>

@@ -1,0 +1,46 @@
+@charset "UTF-8";
+.previus-month{
+  &:hover{
+    cursor: pointer;
+  }
+}
+.next-month{
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.month-year{
+  font-weight: 500;
+}
+
+.week-day{
+  font-weight: 500;
+  padding: 6px;
+  margin: 1px;
+}
+
+.day{
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 1px;
+  font-size: 0.9rem;
+  color: white;
+}
+.day-off{
+  background-color: whitesmoke;
+  color: gray;
+}
+
+.day-available{
+  background-color: #6c757d;
+  &:hover{
+    cursor: pointer;
+    background-color: rgb(14, 78, 14);
+  }
+}
+
+.day-selected{
+  background-color: rgb(14, 78, 14);
+}
