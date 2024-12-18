@@ -16,7 +16,7 @@
     <label for="formGroupExampleInput" class="form-label">
       Escolha uma área para escolher um profissional:
     </label>
-    <select class="form-select" aria-label="Default select example" formControlName="professional">
+    <select class="form-select" aria-label="Default select example" formControlName="professional" (change)="onProfessionalChanged()">
       <option *ngFor="let profissional of professionalsByArea" [ngValue]="profissional">
         {{profissional.name}}
       </option>

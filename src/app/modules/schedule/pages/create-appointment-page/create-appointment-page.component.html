@@ -4,6 +4,7 @@
     <div class="col-6 border rounded shadow-sm p-4">
       <app-form-create-appointment
       (selectedAreaEvent)="onSelectedArea($event)"
+      (selectedProfessionalEvent)="onSelectedProfessional($event)"
       [areas]="areas"
       [professionalsByArea]="professionalsByArea"
       [appointmentTypes]="appointmentTypes"
@@ -11,6 +12,12 @@
       ></app-form-create-appointment>
     </div>
     <div class="col-6 border rounded shadow-sm p-4">
+      <app-calendar
+      [calendarMont] = "calendarMonth"
+      [avaiableDays] = "avaiableDays"
+      (selectedDateEvent) = "onSelectedDate($event)"
+      (changeMonthEvent) = "onChangedMonth($event)"
+      ></app-calendar>
     </div>
     <div class="d-grid gap-2 mt-2 px-5">
       <button class="btn btn-primary shadow-sm" type="submit" data-bs-toggle="modal" data-bs-target="#confirmModal" (click)="createAppointment()">Agendar</button>

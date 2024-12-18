@@ -34,6 +34,8 @@ export class FormCreateAppointmentComponent{
 
   @Input() searchClients !: OperatorFunction<string, readonly Client[]>
 
+  @Output() selectedProfessionalEvent = new EventEmitter<Professional>()
+
   formatter = (client: Client) => client.name
 
   schedule(){
@@ -47,6 +49,9 @@ export class FormCreateAppointmentComponent{
   onAreaChanged(){
     this.selectedAreaEvent.emit(this.appointmentForm.value["area"])
     this.appointmentForm.controls['professional'].enable()
+  }
+  onProfessionalChanged(){
+    this.selectedProfessionalEvent.emit(this.appointmentForm.value["professional"])
   }
 
   get aparea() {return this.appointmentForm.get('area')}
