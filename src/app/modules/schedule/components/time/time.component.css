@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.time{
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 1px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.time-avaible{
+  background-color: #6c757d;
+  &:hover{
+    cursor: pointer;
+    background-color: rgb(14, 78, 14);
+  }
+}
+
+.time-selected{
+  background-color: rgb(14, 78, 14);
+}
+
+.time-off{
+  background-color: whitesmoke;
+  color: gray;
+}

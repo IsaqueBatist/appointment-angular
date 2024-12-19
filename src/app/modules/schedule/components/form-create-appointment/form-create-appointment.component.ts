@@ -17,7 +17,7 @@ export class FormCreateAppointmentComponent{
       area: ['', [Validators.required]],
       professional: [{value: '', disabled: true}, Validators.required],
       appointmentType: ['', [Validators.required]],
-      clientName: ['', [Validators.required]],
+      client: ['', [Validators.required]],
       comments: [''],
     })
   }
@@ -44,7 +44,7 @@ export class FormCreateAppointmentComponent{
     }
   }
   getSelectedClient(): Client{
-    return this.appointmentForm.controls['clientName'].value
+    return this.appointmentForm.controls['client'].value
   }
   onAreaChanged(){
     this.selectedAreaEvent.emit(this.appointmentForm.value["area"])
@@ -57,6 +57,6 @@ export class FormCreateAppointmentComponent{
   get aparea() {return this.appointmentForm.get('area')}
   get approfessional() {return this.appointmentForm.get('professional')}
   get apappointmentType() {return this.appointmentForm.get('appointmentType')}
-  get apclientName() {return this.appointmentForm.get('clientName')}
+  get apclient() {return this.appointmentForm.get('client')}
   get apcomments() {return this.appointmentForm.get('comments')}
 }
