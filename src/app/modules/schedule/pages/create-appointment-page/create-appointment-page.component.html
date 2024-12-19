@@ -18,6 +18,10 @@
       (selectedDateEvent) = "onSelectedDate($event)"
       (changeMonthEvent) = "onChangedMonth($event)"
       ></app-calendar>
+      <app-time
+      (selectedTimeEvent) = "onSelectedTime($event)"
+      [times]="availablesTimes"
+      ></app-time>
     </div>
     <div class="d-grid gap-2 mt-2 px-5">
       <button class="btn btn-primary shadow-sm" type="submit" data-bs-toggle="modal" data-bs-target="#confirmModal" (click)="createAppointment()">Agendar</button>

@@ -40,13 +40,13 @@
     <label for="typeahead-basic" class="form-label">
       Crie ou digite o nome do cliente:
     </label>
-    <input id="typeahead-basic" type="text" class="form-control" formControlName="clientName"
+    <input id="typeahead-basic" type="text" class="form-control" formControlName="client"
       [ngbTypeahead]="searchClients" [resultFormatter]="formatter" [inputFormatter]="formatter" />
     <div class="text-start" *ngIf="getSelectedClient().phone">
       <p>Conforme o telefone do cliente: {{getSelectedClient().phone}}</p>
     </div>
     <div class="text-danger text-start" *ngIf="submitted">
-      <small *ngIf="apclientName?.errors?.['required']"><sup>*</sup>Cliente Obrigatório</small>
+      <small *ngIf="apclient?.errors?.['required']"><sup>*</sup>Cliente Obrigatório</small>
     </div>
   </div>
 
