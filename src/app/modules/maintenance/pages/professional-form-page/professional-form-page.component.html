@@ -1,0 +1,61 @@
+<div class="container text-center">
+  <div class="display-6 my-2">
+    {{isEditingMode? 'Editar' : 'Cadastrar'}} Profissional
+  </div>
+  <div class="border rounded shadow-sm p-4">
+    <form [formGroup]="formGroupProfessional" #FormProfessional="ngForm">
+      <div class="row">
+        <div class="col-8 m-auto">
+          <div class="mb-3">
+            <label for="name">Nome:</label>
+            <input class="form-control" type="text" id="name" name="name" formControlName="name" />
+            <div class="text-danger text-start" *ngIf="FormProfessional.submitted">
+              <small *ngIf="pfname?.errors?.['required']"><sup>*</sup>Nome Obrigatório</small>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="mb-3">
+                <label for="phone">Telefone:</label>
+                <input class="form-control" type="text" id="phone" name="phone" formControlName="phone"
+                  placeholder="telefone" />
+                <div class="text-danger text-start" *ngIf="FormProfessional.submitted">
+                  <small *ngIf="pfphone?.errors?.['required']"><sup>*</sup>Telefone Obrigatório</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="mb-3 text-start">
+                <label for="formGroupExampleInput" class="form-label">Escolha uma área:</label>
+                <select class="form-select" aria-label="Default select example" formControlName="areaId">
+                  <option *ngFor="let area of areas" [ngValue]="area.id">
+                    {{area.name}}
+                  </option>
+                </select>
+                <div class="text-danger text-start" *ngIf="FormProfessional.submitted">
+                  <small *ngIf="pfarea?.errors?.['required']"><sup>*</sup>Área Obrigatória</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                  formControlName="active">
+                <label class=" ms-1 form-check-label" for="flexSwitchCheckChecked">Ativo</label>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3 text-end">
+            <a class="btn btn-secondary me-1" (click)="cancel()">Cancelar</a>
+            <button type="submit" class="btn btn-primary" [disabled]="!FormProfessional.dirty"
+              (click)="saveProfessional()">
+              Salvar
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

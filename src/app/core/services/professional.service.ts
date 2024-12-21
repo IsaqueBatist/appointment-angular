@@ -63,8 +63,22 @@ export class ProfessionalService {
     return this.http.get<Professional[]>(url, {observe: 'response'})
   }
 
+  getProfessionalById(id: number): Observable<Professional>{
+    const url = `${this.baseUrl}/${id}`
+    return this.http.get<Professional>(url)
+  }
+
   deleteProfessional(professional: Professional): Observable<void>{
     const url = `${this.baseUrl}/${professional.id}`
     return this.http.delete<void>(url)
+  }
+
+  createProfessional(professional: Professional): Observable<void>{
+    return this.http.post<void>(this.baseUrl, professional)
+  }
+
+  updateProfessional(professional: Professional): Observable<void>{
+    const url = `${this.baseUrl}/${professional.id}`
+    return this.http.put<void>(url, professional)
   }
 }
