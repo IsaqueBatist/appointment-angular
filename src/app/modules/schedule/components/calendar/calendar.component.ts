@@ -23,6 +23,8 @@ export class CalendarComponent implements OnInit, OnChanges {
 
   @Input() calendarMont !: Date
 
+  @Input() error : string = "Erro"
+
   @Output() changeMonthEvent = new EventEmitter<Date>()
 
   @Output() selectedDateEvent = new EventEmitter<Date>()

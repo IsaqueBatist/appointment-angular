@@ -24,7 +24,7 @@ import { SharedModule } from '../../shared/shared.module';
     TodayAppointmentsPageComponent,
     FormCreateAppointmentComponent,
     CalendarComponent,
-    TimeComponent,
+    TimeComponent
   ],
   imports: [
     CommonModule,
