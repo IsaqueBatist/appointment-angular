@@ -9,8 +9,10 @@ import { Day } from './models/day';
 export class CalendarComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.selectedDay = 0
-    this.loadCalendar()
+    if(changes.hasOwnProperty("avaiableDays")){
+      this.selectedDay = 0
+      this.loadCalendar()
+    }
   }
 
   ngOnInit(): void {

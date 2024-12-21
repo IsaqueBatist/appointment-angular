@@ -779,6 +779,34 @@
       "endTime": "10:00:00",
       "date": "2024-12-04T03:00:00.000Z",
       "id": 9
+    },
+    {
+      "area": {
+        "id": 2,
+        "name": "Fisoterapeuta"
+      },
+      "professional": {
+        "id": 2,
+        "name": "Dra. Maria Lucia",
+        "phone": "(95) 3539-3063",
+        "active": true,
+        "areaId": 2
+      },
+      "type": {
+        "id": 1,
+        "type": "Particular"
+      },
+      "client": {
+        "id": 41,
+        "name": "Santos Lynn",
+        "dateOfBirth": "2023-12-20",
+        "phone": "(84) 1542-3100"
+      },
+      "comments": "asa",
+      "startTime": "09:00:00",
+      "endTime": "09:30:00",
+      "date": "2024-12-11T03:00:00.000Z",
+      "id": 10
     }
   ]
 }
