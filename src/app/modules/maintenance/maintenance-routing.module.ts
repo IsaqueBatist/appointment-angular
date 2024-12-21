@@ -6,10 +6,11 @@ import { AppointmentTypePageComponent } from './pages/appointment-type-page/appo
 import { UserPageComponent } from './pages/user-page/user-page.component';
 import { ClientsTablePageComponent } from './pages/clients-table-page/clients-table-page.component';
 import { ClientFormPageComponent } from './pages/client-form-page/client-form-page.component';
+import { ProfessionalsTablePageComponent } from './pages/professionals-table-page/professionals-table-page.component';
 
 const routes: Routes = [
   {path: 'area', component: AreaPageComponent},
-  {path: 'professional', component: ProfessionalPageComponent},
+  {path: 'professional-table', component: ProfessionalsTablePageComponent},
   {path: 'appointmentType', component: AppointmentTypePageComponent},
   {path: 'clients-table', component: ClientsTablePageComponent},
   {path: 'client-form/:id', component: ClientFormPageComponent},

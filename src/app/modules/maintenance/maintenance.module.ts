@@ -11,6 +11,7 @@ import { ClientFormPageComponent } from './pages/client-form-page/client-form-pa
 import { ClientsTablePageComponent } from './pages/clients-table-page/clients-table-page.component';
 import { ProfessionalPageComponent } from './pages/professional-page/professional-page.component';
 import { UserPageComponent } from './pages/user-page/user-page.component';
+import { ProfessionalsTablePageComponent } from './pages/professionals-table-page/professionals-table-page.component';
 
 
 
@@ -22,7 +23,8 @@ import { UserPageComponent } from './pages/user-page/user-page.component';
     AppointmentTypePageComponent,
     UserPageComponent,
     ClientsTablePageComponent,
-    ClientFormPageComponent
+    ClientFormPageComponent,
+    ProfessionalsTablePageComponent
   ],
   imports: [
     CommonModule,
