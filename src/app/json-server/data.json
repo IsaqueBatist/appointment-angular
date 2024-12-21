@@ -483,12 +483,6 @@
       "phone": "(82) 0415-2136"
     },
     {
-      "id": 3,
-      "name": "Todd Kim",
-      "active": false,
-      "phone": "(80) 9572-2097"
-    },
-    {
       "id": 4,
       "name": "Gracie Warner",
       "active": false,
@@ -627,12 +621,6 @@
       "phone": "(82) 8401-2679"
     },
     {
-      "id": 27,
-      "name": "Whitehead Mcfadden",
-      "active": false,
-      "phone": "(84) 2403-2377"
-    },
-    {
       "id": 28,
       "name": "Pate Cross",
       "active": false,
@@ -663,34 +651,16 @@
       "phone": "(96) 5406-3272"
     },
     {
-      "id": 33,
-      "name": "Webster Farley",
-      "active": true,
-      "phone": "(86) 4505-3542"
-    },
-    {
       "id": 34,
       "name": "Robin Daniel",
       "active": false,
       "phone": "(81) 6530-2618"
     },
     {
-      "id": 35,
-      "name": "Weaver Walters",
-      "active": true,
-      "phone": "(83) 4544-2274"
-    },
-    {
       "id": 36,
       "name": "Alexander Murray",
       "active": false,
       "phone": "(98) 6474-2163"
-    },
-    {
-      "id": 37,
-      "name": "Tracy Mason",
-      "active": false,
-      "phone": "(98) 3550-3166"
     },
     {
       "id": 38,
@@ -709,12 +679,6 @@
       "name": "Moon Merrill",
       "active": false,
       "phone": "(89) 2405-2206"
-    },
-    {
-      "id": 41,
-      "name": "Velasquez Mcconnell",
-      "active": true,
-      "phone": "(96) 4474-3173"
     },
     {
       "id": 42,
@@ -801,12 +765,6 @@
       "phone": "(83) 4525-2706"
     },
     {
-      "id": 56,
-      "name": "Terry Ortega",
-      "active": true,
-      "phone": "(86) 2564-2310"
-    },
-    {
       "id": 57,
       "name": "Shawn Aguirre",
       "active": true,
@@ -877,12 +835,6 @@
       "name": "Alisha Powers",
       "active": true,
       "phone": "(98) 5562-3506"
-    },
-    {
-      "id": 69,
-      "name": "Woods Blanchard",
-      "active": false,
-      "phone": "(82) 1434-3866"
     },
     {
       "id": 70,

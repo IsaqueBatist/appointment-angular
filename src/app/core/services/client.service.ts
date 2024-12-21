@@ -14,7 +14,7 @@ export class ClientService {
     const url = `${this.baseUrl}?name_like=${filter}&_page=${page}&_limit=10&_sort=name`
     return this.http.get<Client[]>(url, {observe: 'response'})
   }
-  
+
   getClientsWithNameContaining(clientNameFilter: string): Observable<Client[]>{
     const url = `${this.baseUrl}?name_like=${clientNameFilter}&_limit=10`
     return this.http.get<Client[]>(url)

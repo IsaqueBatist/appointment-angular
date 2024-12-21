@@ -11,7 +11,7 @@ import { ProfessionalService } from '../../../../core/services/professional.serv
 export class ProfessionalsTablePageComponent implements OnInit{
   ProfessionalPage: Page<Professional> = {} as Page<Professional>
   filter: string = ""
-  page=1;
+  page: number = 1;
 
   constructor(private professionalService: ProfessionalService){}
 
@@ -20,7 +20,7 @@ export class ProfessionalsTablePageComponent implements OnInit{
   }
 
   loadProfessionals() {
-    this.professionalService.getProfessionals(this.filter).subscribe({
+    this.professionalService.getProfessionals(this.filter, this.page).subscribe({
       next: response => {
         this.ProfessionalPage.content = response.body
         this.ProfessionalPage.numberofElements = parseInt(response.headers.get('X-Total-Count')  || '0')
@@ -31,6 +31,10 @@ export class ProfessionalsTablePageComponent implements OnInit{
   }
 
   filterName(){
+    this.loadProfessionals()
+  }
+
+  pageChange(){
     this.loadProfessionals()
   }
 

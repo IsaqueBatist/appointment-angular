@@ -58,8 +58,8 @@ export class ProfessionalService {
     ])
   }
 
-  getProfessionals(filter: string): Observable<HttpResponse<Professional[]>>{
-    const url = `${this.baseUrl}?name_like=${filter}&_limit=10`
+  getProfessionals(filter: string, page: number): Observable<HttpResponse<Professional[]>>{
+    const url = `${this.baseUrl}?name_like=${filter}&_page=${page}&_limit=10&_sort=name`
     return this.http.get<Professional[]>(url, {observe: 'response'})
   }
 
