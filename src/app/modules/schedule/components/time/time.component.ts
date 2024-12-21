@@ -23,6 +23,8 @@ export class TimeComponent implements OnInit, OnChanges {
 
   @Input()times: Time[] = []
 
+  @Input() error !: string
+
   @Output() selectedTimeEvent = new EventEmitter<Time>()
 
   resetTimes(){

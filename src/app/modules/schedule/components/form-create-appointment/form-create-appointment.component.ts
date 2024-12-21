@@ -16,7 +16,7 @@ export class FormCreateAppointmentComponent{
     this.appointmentForm = this.formBuilder.group({
       area: ['', [Validators.required]],
       professional: [{value: '', disabled: true}, Validators.required],
-      appointmentType: ['', [Validators.required]],
+      type: ['', [Validators.required]],
       client: ['', [Validators.required]],
       comments: [''],
     })
@@ -52,6 +52,11 @@ export class FormCreateAppointmentComponent{
   }
   onProfessionalChanged(){
     this.selectedProfessionalEvent.emit(this.appointmentForm.value["professional"])
+  }
+
+  cleanForm(){
+    this.appointmentForm.reset()
+    this.submitted = false
   }
 
   get aparea() {return this.appointmentForm.get('area')}

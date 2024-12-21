@@ -28,7 +28,7 @@
 
   <div class="mb-3 text-start">
     <label for="formGroupExampleInput" class="form-label">Tipo de atendimento:</label>
-    <select class="form-select" aria-label="Default select example" formControlName="appointmentType">
+    <select class="form-select" aria-label="Default select example" formControlName="type">
       <option *ngFor="let type of appointmentTypes" [ngValue]="type">{{type.type}}</option>
     </select>
     <div class="text-danger text-start" *ngIf="submitted">
@@ -42,7 +42,7 @@
     </label>
     <input id="typeahead-basic" type="text" class="form-control" formControlName="client"
       [ngbTypeahead]="searchClients" [resultFormatter]="formatter" [inputFormatter]="formatter" />
-    <div class="text-start" *ngIf="getSelectedClient().phone">
+    <div class="text-start" *ngIf="getSelectedClient()">
       <p>Conforme o telefone do cliente: {{getSelectedClient().phone}}</p>
     </div>
     <div class="text-danger text-start" *ngIf="submitted">
