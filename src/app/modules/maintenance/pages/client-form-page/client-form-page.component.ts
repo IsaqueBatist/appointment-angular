@@ -37,7 +37,7 @@ export class ClientFormPageComponent implements OnInit{
   loadClient(clientId: number){
     this.clientService.getClientById(clientId).subscribe({
       next: client => this.formGroupClient.setValue(client),
-      error: () => {alert('Erro ao carregar cliente')}
+      error: () => this.toastService.show("Erro ao carregar Cliente", {classname: 'bg-danger text-light'})
     })
   }
 

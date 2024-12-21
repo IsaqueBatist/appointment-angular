@@ -32,7 +32,7 @@
           <td>{{professional.phone}}</td>
           <td>{{professional.active ? "Ativo" : "Desativo"}}</td>
           <td>
-            <img src="assets/svg/trash3-fill.svg" width="20" height="20" alt="remove Professional" (click)="removeProfesional(professional)"/>
+            <img src="assets/svg/trash3-fill.svg" width="20" height="20" alt="remove Professional" (click)="removeProfesional(professional, modalConfirm)"/>
           </td>
         </tr>
       </tbody>
@@ -40,3 +40,9 @@
     <ngb-pagination  [collectionSize]="ProfessionalPage.numberofElements" class="d-flex justify-content-center" [(page)]="page" [boundaryLinks]="true" (pageChange)="pageChange()" />
   </div>
 </div>
+
+<app-modal [title]="'Deseja remover o Cliente?'" #modalConfirm >
+  <ng-container *ngIf="selectedProfessional">
+    Nome: <span class="fw-bold me-1" >{{selectedProfessional.name}}</span>
+  </ng-container>
+</app-modal>

@@ -575,13 +575,6 @@
       "areaId": 2
     },
     {
-      "id": 14,
-      "name": "Baldwin Lara",
-      "active": true,
-      "phone": "(85) 8482-2145",
-      "areaId": 1
-    },
-    {
       "id": 15,
       "name": "Buckley Brooks",
       "active": true,
@@ -624,13 +617,6 @@
       "areaId": 2
     },
     {
-      "id": 21,
-      "name": "Battle Peck",
-      "active": false,
-      "phone": "(98) 8430-3384",
-      "areaId": 3
-    },
-    {
       "id": 22,
       "name": "Mckenzie Jennings",
       "active": true,
@@ -650,13 +636,6 @@
       "active": true,
       "phone": "(93) 3580-2631",
       "areaId": 1
-    },
-    {
-      "id": 25,
-      "name": "Branch Avery",
-      "active": true,
-      "phone": "(95) 5438-2116",
-      "areaId": 2
     },
     {
       "id": 26,
@@ -710,8 +689,8 @@
     {
       "id": 33,
       "name": "Bonner Vaughn",
-      "active": true,
       "phone": "(94) 4531-3202",
+      "active": false,
       "areaId": 2
     },
     {
@@ -778,20 +757,6 @@
       "areaId": 3
     },
     {
-      "id": 43,
-      "name": "Bennett Mcfarland",
-      "active": false,
-      "phone": "(98) 6467-3257",
-      "areaId": 2
-    },
-    {
-      "id": 44,
-      "name": "Althea Jones",
-      "active": true,
-      "phone": "(94) 1406-3022",
-      "areaId": 3
-    },
-    {
       "id": 45,
       "name": "Ollie Rogers",
       "active": false,
@@ -848,25 +813,11 @@
       "areaId": 2
     },
     {
-      "id": 53,
-      "name": "Black Atkinson",
-      "active": true,
-      "phone": "(96) 2494-3397",
-      "areaId": 2
-    },
-    {
       "id": 54,
       "name": "Wyatt Leonard",
       "active": false,
       "phone": "(84) 5592-2277",
       "areaId": 1
-    },
-    {
-      "id": 55,
-      "name": "Beard Henson",
-      "active": true,
-      "phone": "(98) 0411-3923",
-      "areaId": 2
     },
     {
       "id": 56,
@@ -1164,9 +1115,9 @@
     },
     {
       "id": 99,
-      "name": "Bette Charles",
-      "active": true,
-      "phone": "(86) 4491-2367",
+      "name": "Isaque",
+      "phone": "(83) 3518-3274",
+      "active": false,
       "areaId": 2
     }
   ],
