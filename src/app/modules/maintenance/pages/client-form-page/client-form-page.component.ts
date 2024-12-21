@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {  FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Location } from '@angular/common';
 import { ClientService } from '../../../../core/services/client.service';
 import { ActivatedRoute } from '@angular/router';
@@ -68,8 +68,6 @@ export class ClientFormPageComponent implements OnInit{
   cencel(){
     this.location.back()
   }
-
-
 
   get pfsname(){return this.formGroupClient.get('name')}
   get pfsphone(){return this.formGroupClient.get('phone')}
