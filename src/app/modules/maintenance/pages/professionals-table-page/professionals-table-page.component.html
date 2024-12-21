@@ -2,7 +2,7 @@
   <div class="display-6 my-2">Cadastro de Profissionais:</div>
   <div class="border rounded shadow-sm p-4">
     <div class="text-end">
-      <a class="btn btn-primary" routerLink="/client-form">Novo</a>
+      <a class="btn btn-primary" href="#">Novo</a>
     </div>
     <table class="table">
       <thead>
@@ -37,5 +37,6 @@
         </tr>
       </tbody>
     </table>
+    <ngb-pagination  [collectionSize]="ProfessionalPage.numberofElements" class="d-flex justify-content-center" [(page)]="page" [boundaryLinks]="true" (pageChange)="pageChange()" />
   </div>
 </div>
