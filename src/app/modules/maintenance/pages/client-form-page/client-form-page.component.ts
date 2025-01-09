@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {  FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Location } from '@angular/common';
 import { ClientService } from '../../../../core/services/client.service';
 import { ActivatedRoute } from '@angular/router';
@@ -37,7 +37,7 @@ export class ClientFormPageComponent implements OnInit{
   loadClient(clientId: number){
     this.clientService.getClientById(clientId).subscribe({
       next: client => this.formGroupClient.setValue(client),
-      error: () => {alert('Erro ao carregar cliente')}
+      error: () => this.toastService.show("Erro ao carregar Cliente", {classname: 'bg-danger text-light'})
     })
   }
 
@@ -68,8 +68,6 @@ export class ClientFormPageComponent implements OnInit{
   cencel(){
     this.location.back()
   }
-
-
 
   get pfsname(){return this.formGroupClient.get('name')}
   get pfsphone(){return this.formGroupClient.get('phone')}
